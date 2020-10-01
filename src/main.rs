@@ -5,15 +5,15 @@ use std::thread::sleep;
 fn main() {
     let mut tab : Vec<f64> = Vec::new();
     let mut res : Vec<f64> = Vec::new();
-    for _i in 0..100{
+    for _i in 0..1000_i32{
         res.push(1.0);
     }
-    init_zero(&mut tab, 100_i32);
-    a_bord1(&mut tab, 100_i32);
+    init_zero(&mut tab, 1000_i32);
+    a_bord1(&mut tab, 1000_i32);
     let now = Instant::now();
-    gauss_supp(&mut tab, &mut res,100);
-    gauss_inff(&mut tab, &mut res,100);
-    gauss_res(&mut tab, &mut res,100);
+    gauss_supp(&mut tab, &mut res,1000_i32);
+    gauss_inff(&mut tab, &mut res,1000_i32);
+    gauss_res(&mut tab, &mut res,1000_i32);
     println!("{}", now.elapsed().as_secs_f32());
     //display_tab_res(&mut res, 1000_i32);
 }
